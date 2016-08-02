@@ -18,6 +18,7 @@ import javafx.beans.binding.StringBinding;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.Cursor;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
@@ -100,6 +101,10 @@ public class LoginViewController {
         loginButton.setText(LangUtils.translate("login.button"));
         authCode.setPromptText(LangUtils.translate("login.authCode"));
         confirmButton.setText(LangUtils.translate("login.confirm"));
+        
+        validateButton.setCursor(Cursor.HAND);
+        loginButton.setCursor(Cursor.HAND);
+        confirmButton.setCursor(Cursor.HAND);
 
         for (Forum.ForumType value : Forum.ForumType.values()) {
             softwareBox.getItems().add(value.getName());

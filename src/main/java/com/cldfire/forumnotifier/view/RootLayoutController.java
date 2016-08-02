@@ -4,6 +4,7 @@ import com.cldfire.forumnotifier.ForumNotifier;
 import com.cldfire.forumnotifier.util.EnumGoogleIcon;
 import com.cldfire.forumnotifier.util.LangUtils;
 import javafx.fxml.FXML;
+import javafx.scene.Cursor;
 import javafx.scene.control.Label;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
@@ -31,9 +32,11 @@ public class RootLayoutController {
         addText.setTranslateY(-6);
         addText.setTranslateX(1);
         addAccount.getChildren().addAll(addIcon, addText);
+        addAccount.setCursor(Cursor.HAND);
 
         settings.setText(EnumGoogleIcon.SETTINGS.get());
         settings.setStyle("-fx-font-family: 'Material Icons'; -fx-font-size: 24; -fx-fill: #7c7c7c;");
+        settings.setCursor(Cursor.HAND);
     }
 
     public void setForumNotifier(ForumNotifier forumNotifier) {
